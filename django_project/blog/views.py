@@ -12,4 +12,3 @@ def projects(request):
 
 def contact(request):
     return render(request, 'blog/contact.html')
-
