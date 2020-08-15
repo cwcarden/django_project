@@ -11,7 +11,6 @@
   <div class="container">
 
     
-
     <!-- Page Features -->
     <div class="row text-center">
 
@@ -19,11 +18,14 @@
         <div class="card h-100">
           <img class="card-img-top" src="http://placehold.it/500x325" alt="">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+            {% for post in posts %}
+            <h4 class="card-title">{{ post.title }} </h4>
+            <p class="card-text">{{ post.content }}</p>
+            <p class="card-text">By {{ post.author }} on {{ post.date_posted }}</p>
           </div>
           <div class="card-footer">
             <a href="#" class="btn btn-primary">Find Out More!</a>
+            {% endfor %}
           </div>
         </div>
       </div>
