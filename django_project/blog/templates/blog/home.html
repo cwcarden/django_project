@@ -3,75 +3,34 @@
 {% block content %}
 
 <!-- Jumbotron Header -->
-    <header class="jumbotron my-4">
+    <center><header class="jumbotron my-4">
       <h1 class="display-3">Blog Home</h1>
       <p class="lead">Welcome to my Blog</p>
-    </header>
-      <!-- Page Content -->
+    </header></center>
+      
   <div class="container">
 
-    
-    <!-- Page Features -->
+    <!-- Blog db post loop -->
     <div class="row text-center">
-
+      {% for post in posts %}
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+          <img class="card-img-top" src="https://cdn-media-1.freecodecamp.org/images/0*ngXgBNNdx6iiWP8q.png" alt="">
           <div class="card-body">
-            {% for post in posts %}
+            
             <h4 class="card-title">{{ post.title }} </h4>
-            <p class="card-text">{{ post.content }}</p>
+            <p class="card-text">{{ post.description }}</p>
             <p class="card-text">By {{ post.author }} on {{ post.date_posted }}</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-            {% endfor %}
+            <a href="#" class="btn btn-primary">Read Post</a>
+         
           </div>
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
     <!-- /.row -->
-
+    {% endfor %}
   </div>
   <!-- /.container -->
 

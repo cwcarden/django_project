@@ -21,13 +21,13 @@ posts = [
     {
         "author": "charles carden",
         "title": "blog post 1",
-        "content": "First content",
+        "description": "First content",
         "date_posted": "august 2020"
     },
     {
         "author": "bio",
         "title": "blog post 2",
-        "content": "second content",
+        "description": "second content",
         "date_posted": "august 3, 2020"
     }
 ]
