@@ -15,12 +15,14 @@
       {% for post in posts %}
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
+
+          <a href="/home">
           <img class="card-img-top" src="https://cdn-media-1.freecodecamp.org/images/0*ngXgBNNdx6iiWP8q.png" alt="">
-          <div class="card-body">
+          <div class="card-body"></a>
             
             <h4 class="card-title">{{ post.title }} </h4>
             <p class="card-text">{{ post.description }}</p>
-            <p class="card-text">By {{ post.author }} on {{ post.date_posted }}</p>
+            <p class="card-text">By {{ post.author }} on {{ post.date_posted|date:"N d, Y" }}</p>
           </div>
           <div class="card-footer">
             <a href="#" class="btn btn-primary">Read Post</a>
@@ -29,11 +31,9 @@
         </div>
       </div>
 
-    <!-- /.row -->
     {% endfor %}
-  </div>
-  <!-- /.container -->
 
+</div>
   
 
 

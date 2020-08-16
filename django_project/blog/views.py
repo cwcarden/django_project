@@ -15,19 +15,5 @@ def projects(request):
 def contact(request):
     return render(request, 'blog/contact.html')
 
-
-
-posts = [
-    {
-        "author": "charles carden",
-        "title": "blog post 1",
-        "description": "First content",
-        "date_posted": "august 2020"
-    },
-    {
-        "author": "bio",
-        "title": "blog post 2",
-        "description": "second content",
-        "date_posted": "august 3, 2020"
-    }
-]
+def login(request):
+    return render(request, 'blog/login.html')
